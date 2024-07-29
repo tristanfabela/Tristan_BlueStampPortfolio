@@ -19,13 +19,9 @@ You should comment out all portions of your portfolio that you have not complete
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=zn3DXvNNs7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+I set up the code and build of the car during my first week and completed it which was my first milestone. By the end of the week, I had my car moving forward, backward, left, and right. How I set up my project was by using videos and online resources that showed me how to get my Arduino plugged into my H-bridges which are what control the motors. I experienced a lot of trial and error with my coding in making the correct outputs/wheels move in the proper direction when needed. Overall, I learned a lot during this project and was able to use my experience with breadboarding to solve a problem that involved getting the 5V port to more than one H-bridge by putting the 2 wires in the same row with a 5V wire.
 
 
 
