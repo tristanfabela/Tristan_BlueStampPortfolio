@@ -19,7 +19,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=zn3DXvNNs7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 I set up the code and build of the car during my first week and completed it which was my first milestone. By the end of the week, I had my car moving forward, backward, left, and right. How I set up my project was by using videos and online resources that showed me how to get my Arduino plugged into my H-bridges which are what control the motors. I experienced a lot of trial and error with my coding in making the correct outputs/wheels move in the proper direction when needed. Overall, I learned a lot during this project and was able to use my experience with breadboarding to solve a problem that involved getting the 5V port to more than one H-bridge by putting the 2 wires in the same row with a 5V wire.
 
@@ -41,13 +41,9 @@ For your second milestone, explain what you've worked on since your previous mil
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=zn3DXvNNs7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+I set up the code and build of the car during my first week and completed it which was my first milestone. By the end of the week, I had my car moving forward, backward, left, and right. How I set up my project was by using videos and online resources that showed me how to get my Arduino plugged into my H-bridges which are what control the motors. I experienced a lot of trial and error with my coding in making the correct outputs/wheels move in the proper direction when needed. Overall, I learned a lot during this project and was able to use my experience with breadboarding to solve a problem that involved getting the 5V port to more than one H-bridge by putting the 2 wires in the same row with a 5V wire.
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
