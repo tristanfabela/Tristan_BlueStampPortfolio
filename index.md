@@ -27,7 +27,7 @@ I set up the code and build of the car during my first week and completed it whi
 
 # Schematics 
 ![Headstone image](schematic1.PNG)
-![Headstone image]()
+![Headstone image](schematic2.PNG)
 
 
 # Code 
