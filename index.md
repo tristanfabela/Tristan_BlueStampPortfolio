@@ -1,11 +1,5 @@
 # Gesture Controlled Robot
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
-
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
+The Gesture Controlled Robot is a Bluetooth-powered project consisting of two separate components: the car itself and the controller. The controller isn't your typical joystick, as it uses your hand gestures to move the car accordingly with the use of an accelerometer. The project consists of lots of wiring and coding which caused many setbacks in my project but I was still able to persevere and complete the project.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -13,7 +7,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
-![Headstone Image](logo.svg)
+
   
 # Final Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_9JPpcqdADI?si=sVyLAJbtnQgzalOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -21,6 +15,8 @@ You should comment out all portions of your portfolio that you have not complete
 
 # Second Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5KBos3E3Dp8?si=DZT6kQ0G72HfWYza" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+In my second milestone, I completed the baseline project of the gesture-controlled robot which involved building the controller, setting up and connecting the Bluetooth devices, and using the code that would run the final product. Throughout this week, I ran into many problems with the wiring which caused me to have many setbacks in my project where I had to reevaluate my project. Every time I thought I had fixed an error in my wiring a new one would appear which made the project very challenging during this milestone. Though it was a challenge, I got through it and was able to create my finished baseline product which was worth it in the end. I also began the start of my project modification that will be completed by my final milestone.
 
 # First Milestone
 
@@ -30,7 +26,8 @@ You should comment out all portions of your portfolio that you have not complete
 I set up the code and build of the car during my first week and completed it which was my first milestone. By the end of the week, I had my car moving forward, backward, left, and right. How I set up my project was by using videos and online resources that showed me how to get my Arduino plugged into my H-bridges which are what control the motors. I experienced a lot of trial and error with my coding in making the correct outputs/wheels move in the proper direction when needed. Overall, I learned a lot during this project and was able to use my experience with breadboarding to solve a problem that involved getting the 5V port to more than one H-bridge by putting the 2 wires in the same row with a 5V wire.
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+![Headstone image](https://1drv.ms/i/c/6296e264662de66f/EQwfchDWo59IuvikKFHMBscBJhvMBh-HZAOZmYQDeBQvJw?e=pG0sh7)
+
 
 # Code 
 Arduino Uno
