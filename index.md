@@ -5,10 +5,8 @@ The Gesture Controlled Robot is a Bluetooth-powered project consisting of two se
 |:--:|:--:|:--:|:--:|
 | Tristan F | Dublin High School | Electrical Engineering | Incoming Senior
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
+![Headstone image](IMG_6132.jpg)
 
-
-  
 # Final Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_9JPpcqdADI?si=sVyLAJbtnQgzalOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
