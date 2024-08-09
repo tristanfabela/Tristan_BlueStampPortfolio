@@ -26,7 +26,8 @@ In my second milestone, I completed the baseline project of the gesture-controll
 I set up the code and build of the car during my first week and completed it which was my first milestone. By the end of the week, I had my car moving forward, backward, left, and right. How I set up my project was by using videos and online resources that showed me how to get my Arduino plugged into my H-bridges which are what control the motors. I experienced a lot of trial and error with my coding in making the correct outputs/wheels move in the proper direction when needed. Overall, I learned a lot during this project and was able to use my experience with breadboarding to solve a problem that involved getting the 5V port to more than one H-bridge by putting the 2 wires in the same row with a 5V wire.
 
 # Schematics 
-![Headstone image](https://1drv.ms/i/c/6296e264662de66f/EQwfchDWo59IuvikKFHMBscBJhvMBh-HZAOZmYQDeBQvJw?e=pG0sh7)
+![Headstone image](schematic1.PNG)
+![Headstone image]()
 
 
 # Code 
