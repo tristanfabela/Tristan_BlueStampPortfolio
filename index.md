@@ -35,16 +35,236 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
+Arduino Uno
 ```c++
+#include <SoftwareSerial.h>
+
+#define tx 2
+#define rx 3
+
+SoftwareSerial configBt(rx, tx);
+
+char c ="";
+
+const int A_1B = 5;
+const int A_1A = 6;
+const int B_1B = 9;
+const int B_1A = 10;
+const int A_1B2 = 7;
+const int A_1A2 = 8;
+const int B_1B2 = 11;
+const int B_1A2 = 12;
+
+const int trigPin = 4;
+const int echoPin = 13;
+
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(38400);
+  configBt.begin(38400);
+  pinMode (tx, OUTPUT);
+  pinMode (rx, INPUT);
+
   Serial.begin(9600);
-  Serial.println("Hello World!");
+  pinMode (trigPin, OUTPUT);
+  pinMode (echoPin, INPUT);
+
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
+  pinMode(A_1B2, OUTPUT);
+  pinMode(A_1A2, OUTPUT);
+  pinMode(B_1B2, OUTPUT);
+  pinMode(B_1A2, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
+    if (configBt.available()){
+    c = (char)configBt.read();
+    Serial.println(c);
+}
+
+
+switch(c){
+
+  case 'F':
+    forward();
+    break;
+
+  case 'L':
+    left();
+    break;
+
+  case 'R':
+    right();
+    break;
+
+  case 'B':
+    backward();
+    break;
+
+  case 'S':
+  freeze();
+  }
+
+long duration, distance;
+  
+  // Send a pulse from the ultrasonic sensor
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  // Calculate distance based on the time taken for the echo
+  duration = pulseIn(echoPin, HIGH);
+  distance = (duration / 2) / 29.1;
+  
+  // Display the distance on the Serial Monitor
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+  
+  if (distance < 20) { // If an object is within 10 cm
+    freeze();
+  } else {
+    switch(c);
+  }
+  
+  delay(100);
+}
+
+void forward(){
+
+  digitalWrite(A_1B, HIGH);
+  digitalWrite(A_1A, LOW);
+  digitalWrite(B_1B, LOW);
+  digitalWrite(B_1A, HIGH);
+  digitalWrite(A_1B2, HIGH);
+  digitalWrite(A_1A2, LOW);
+  digitalWrite(B_1B2, LOW);
+  digitalWrite(B_1A2, HIGH);
+
+}
+
+//moves robot backwards
+void backward() {
+  digitalWrite(A_1B, LOW);
+  digitalWrite(A_1A, HIGH);
+  digitalWrite(B_1B, HIGH);
+  digitalWrite(B_1A, LOW);
+  digitalWrite(A_1B2, LOW);
+  digitalWrite(A_1A2, HIGH);
+  digitalWrite(B_1B2, HIGH);
+  digitalWrite(B_1A2, LOW);
+
+}
+
+//turns robot right
+void right() {
+  digitalWrite(A_1B, HIGH);
+  digitalWrite(A_1A, LOW);
+  digitalWrite(B_1B, HIGH);
+  digitalWrite(B_1A, LOW);
+  digitalWrite(A_1B2, HIGH);
+  digitalWrite(A_1A2, LOW);
+  digitalWrite(B_1B2, HIGH);
+  digitalWrite(B_1A2, LOW);
+
+}
+
+//turns robot left
+void left() {
+  digitalWrite(A_1B, LOW);
+  digitalWrite(A_1A, HIGH);
+  digitalWrite(B_1B, LOW);
+  digitalWrite(B_1A, HIGH);
+  digitalWrite(A_1B2, LOW);
+  digitalWrite(A_1A2, HIGH);
+  digitalWrite(B_1B2, LOW);
+  digitalWrite(B_1A2, HIGH);
+
+}
+
+//stops robot
+void freeze() {
+  digitalWrite(A_1B, LOW);
+  digitalWrite(A_1A, LOW);
+  digitalWrite(B_1B, LOW);
+  digitalWrite(B_1A, LOW);
+  digitalWrite(A_1B2, LOW);
+  digitalWrite(A_1A2, LOW);
+  digitalWrite(B_1B2, LOW);
+  digitalWrite(B_1A2, LOW);
+
+}
+```
+Arduino Micro
+
+```c++
+#include <Wire.h>
+
+#define MPU6050_ADDRESS 0x68
+
+int16_t accelerometerX, accelerometerY, accelerometerZ;
+
+void setup() {
+
+  Wire.begin();
+  Serial1.begin(38400);
+
+
+  Wire.beginTransmission(MPU6050_ADDRESS);
+  Wire.write(0x6B);
+  Wire.write(0);
+  Wire.endTransmission(true);
+
+  delay(100);
+
+}
+
+void loop() {
+  
+  readAccelerometerData();
+  determineGesture();
+  delay(500);
+
+}
+
+void readAccelerometerData()
+
+{
+  Wire.beginTransmission(MPU6050_ADDRESS);
+  Wire.write(0x3B);
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU6050_ADDRESS, 6, true);
+
+  accelerometerX = Wire.read() <<8 | Wire.read();
+  accelerometerY = Wire.read() <<8 | Wire.read();
+  accelerometerZ = Wire.read() <<8 | Wire.read();
+Serial.print(accelerometerX);
+Serial.print(accelerometerY);
+}
+
+void determineGesture()
+{
+  if (accelerometerY >= 6500) {
+    Serial1.write('F');
+  }
+  else if (accelerometerY <= -4000) {
+    Serial1.write('B');
+  }
+  else if (accelerometerX <= -3250) {
+    Serial1.write ('L');
+  }
+  else if (accelerometerX >= 3250) {
+    Serial1.write('R');
+  }
+    else{
+      Serial1.write('S');
+    }
 }
 ```
 
