@@ -28,7 +28,7 @@ I set up the code and build of the car during my first week and completed it whi
 Car Schematic (Uno)
 ![Headstone image](schematic1.PNG)
 Controller Schematic (Micro)
-![Headstone image](schematic2.PNG)
+![Headstone image](333.PNG)
 
 
 # Code 
