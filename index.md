@@ -42,7 +42,7 @@ Arduino Uno
 SoftwareSerial configBt(rx, tx);
 
 char c ="";
-
+//renaming each digital pin to the H-bridge port its plugged into
 const int A_1B = 5;
 const int A_1A = 6;
 const int B_1B = 9;
@@ -56,7 +56,6 @@ const int trigPin = 4;
 const int echoPin = 13;
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(38400);
   configBt.begin(38400);
   pinMode (tx, OUTPUT);
@@ -66,6 +65,7 @@ void setup() {
   pinMode (trigPin, OUTPUT);
   pinMode (echoPin, INPUT);
 
+  //making digital pins outputs
   pinMode(A_1B, OUTPUT);
   pinMode(A_1A, OUTPUT);
   pinMode(B_1B, OUTPUT);
@@ -124,7 +124,7 @@ long duration, distance;
   Serial.print(distance);
   Serial.println(" cm");
   
-  if (distance < 20) { // If an object is within 10 cm
+  if (distance < 20) { // If an object is within 20 cm
     freeze();
   } else {
     switch(c);
